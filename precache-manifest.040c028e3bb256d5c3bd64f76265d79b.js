@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8e5ffc83988a7eddd2fe2fd74ed2aa91",
+    "revision": "e9486211ee7d5eadcbc193419bb590c5",
     "url": "/dnd-strife/index.html"
   },
   {
-    "revision": "50676e8274cdfa1a54d9",
+    "revision": "4e9fd278f36e347d406d",
     "url": "/dnd-strife/static/css/main.5f361e03.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dnd-strife/static/js/2.963ac434.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "50676e8274cdfa1a54d9",
-    "url": "/dnd-strife/static/js/main.2eff4a83.chunk.js"
+    "revision": "4e9fd278f36e347d406d",
+    "url": "/dnd-strife/static/js/main.5d759bba.chunk.js"
   },
   {
     "revision": "99dd48928b5cece5b868",
