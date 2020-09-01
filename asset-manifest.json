@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/dnd-strife/static/css/main.5f361e03.chunk.css",
+    "main.js": "/dnd-strife/static/js/main.2eff4a83.chunk.js",
+    "main.js.map": "/dnd-strife/static/js/main.2eff4a83.chunk.js.map",
+    "runtime-main.js": "/dnd-strife/static/js/runtime-main.0fc750e4.js",
+    "runtime-main.js.map": "/dnd-strife/static/js/runtime-main.0fc750e4.js.map",
+    "static/js/2.963ac434.chunk.js": "/dnd-strife/static/js/2.963ac434.chunk.js",
+    "static/js/2.963ac434.chunk.js.map": "/dnd-strife/static/js/2.963ac434.chunk.js.map",
+    "index.html": "/dnd-strife/index.html",
+    "precache-manifest.a8a0f5cb6defc66f83015dd6d87100f1.js": "/dnd-strife/precache-manifest.a8a0f5cb6defc66f83015dd6d87100f1.js",
+    "service-worker.js": "/dnd-strife/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/dnd-strife/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.963ac434.chunk.js.LICENSE.txt": "/dnd-strife/static/js/2.963ac434.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/dnd-strife/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0fc750e4.js",
+    "static/js/2.963ac434.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.2eff4a83.chunk.js"
+  ]
+}
