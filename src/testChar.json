@@ -11,27 +11,27 @@
   "stats": {
     "str": {
       "name": "STR",
-      "base": 10,
+      "base": 8,
       "prof": false
     },
     "dex": {
       "name": "DEX",
-      "base": 10,
+      "base": 18,
       "prof": false
     },
     "con": {
       "name": "CON",
-      "base": 10,
+      "base": 15,
       "prof": false
     },
     "int": {
       "name": "INT",
-      "base": 10,
+      "base": 12,
       "prof": false
     },
     "wis": {
       "name": "WIS",
-      "base": 10,
+      "base": 14,
       "prof": false
     },
     "cha": {

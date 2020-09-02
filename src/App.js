@@ -1,26 +1,57 @@
 import React from 'react';
 import './App.css';
 
-import data from './blankChar.json';
+import data from './testChar.json';
+
+class GenericCard extends React.Component {
+  render() {
+    return (
+      <div className="card">
+        <div className="card-body text-center">
+          {this.props.children}
+        </div>
+      </div>
+    )
+  }
+}
 
 class StatPanelGroup extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = data;
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.)
+  }
+
   render() {
     let temp = [];
 
-    for (const stat in data.stats) {
+    for (const key in data.stats) {
+      let element = this.state.stats[key];
+
+      let tempMod = "";
+      if (element.base >= 0) {
+        tempMod = "+" + Math.floor((element.base - 10) / 2);
+      } else {
+        tempMod = "-" + Math.floor((element.base - 10) / 2);
+      }
+
       temp.push({
-        name: stat,
-        val: data.stats[stat],
-        mod: Math.floor((data.stats[stat] - 10) / 2)
+        key: "card-" + element.name,
+        name: element.name,
+        val: element.base,
+        mod: tempMod
       })
     }
-
-    console.log(temp);
 
     return (
       <div className="row row-cols-1 row-cols-md-6">
         {temp.map(e => (
           <StatPanel
+            key={e.key}
             name={e.name}
             val={e.val}
             mod={e.mod}
@@ -35,19 +66,26 @@ class StatPanel extends React.Component {
   render() {
     return (
       <div className="col mb-2">
-        <div className="card">
-          <div className="card-body text-center" id="stat-str">
-            <h5>{this.props.name}</h5>
-            <h2>{this.props.val}</h2>
-            <h6>{this.props.mod}</h6>
-          </div>
-        </div>
+        <GenericCard>
+          <h5>{this.props.name}</h5>
+          <h2>{this.props.val}</h2>
+          <h6>{this.props.mod}</h6>
+        </GenericCard>
       </div>
     )
   }
 }
 
 export default function App() {
+
+  function increment() {
+    for (const key in data.stats) {
+      const element = data.stats[key];
+      element.base++;
+      console.log(element.base);
+    }
+  }
+
   return (
     <div className="app">
 
@@ -74,8 +112,11 @@ export default function App() {
         <div className="container" id="content">
           <div className="d-flex justify-content-center">
             <div className="mb-5">
-              <button className="btn btn-lg btn-primary" disabled>Create New Character</button>
+              <button className="btn btn-lg btn-block btn-primary" disabled>Create New Character</button>
               <p className="text-muted"><small>also coming soon!</small></p>
+              <br />
+
+              <button className="btn btn-lg btn-block btn-primary" onClick={increment}>Increment Stats</button>
             </div>
           </div>
 
