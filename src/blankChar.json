@@ -1,6 +1,7 @@
 {
   "characterName": "blank",
   "playerName": "blank",
+  "alignment": "True Neutral",
   "level": 0,
   "exp": 0,
   "hp": {
@@ -8,20 +9,36 @@
     "current": 0
   },
   "stats": {
-    "str": 12,
-    "dex": 13,
-    "con": 15,
-    "int": 7,
-    "wis": 20,
-    "cha": 2
-  },
-  "savingThrowProficiency": {
-    "str": false,
-    "dex": false,
-    "con": false,
-    "int": false,
-    "wis": false,
-    "cha": false
+    "str": {
+      "name": "STR",
+      "base": 12,
+      "prof": false
+    },
+    "dex": {
+      "name": "DEX",
+      "base": 12,
+      "prof": false
+    },
+    "con": {
+      "name": "CON",
+      "base": 12,
+      "prof": false
+    },
+    "int": {
+      "name": "INT",
+      "base": 12,
+      "prof": false
+    },
+    "wis": {
+      "name": "WIS",
+      "base": 12,
+      "prof": false
+    },
+    "cha": {
+      "name": "CHA",
+      "base": 12,
+      "prof": false
+    }
   },
   "skillProficiency": {
     "acrobatics": false,
@@ -43,5 +60,7 @@
     "stealth": false,
     "survival": false,
     "smithing": false
-  }
+  },
+  "languages": [],
+  "items": []
 }
