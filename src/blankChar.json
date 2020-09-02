@@ -1,0 +1,47 @@
+{
+  "characterName": "blank",
+  "playerName": "blank",
+  "level": 0,
+  "exp": 0,
+  "hp": {
+    "max": 0,
+    "current": 0
+  },
+  "stats": {
+    "str": 12,
+    "dex": 13,
+    "con": 15,
+    "int": 7,
+    "wis": 20,
+    "cha": 2
+  },
+  "savingThrowProficiency": {
+    "str": false,
+    "dex": false,
+    "con": false,
+    "int": false,
+    "wis": false,
+    "cha": false
+  },
+  "skillProficiency": {
+    "acrobatics": false,
+    "animalHandling": false,
+    "arcana": false,
+    "athletics": false,
+    "deception": false,
+    "history": false,
+    "insight": false,
+    "intimidation": false,
+    "investigation": false,
+    "medicine": false,
+    "nature": false,
+    "perception": false,
+    "performance": false,
+    "persuasion": false,
+    "religion": false,
+    "sleightOfHand": false,
+    "stealth": false,
+    "survival": false,
+    "smithing": false
+  }
+}
