@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ab724e24595d9abc53f8378a876c174b",
+    "revision": "46ab45bed804269a8f824d22e9711688",
     "url": "/dnd-strife/index.html"
   },
   {
