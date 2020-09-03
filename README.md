@@ -6,20 +6,20 @@ This project is intended to be a full replacement for a form-filled or pen & pap
 
 ## Goals
 
-[ ] JSON Model Complete
-  [x] Name
-  [x] Basic Info
-  [x] Abilities and Skills
-  [x] Background (bond, flaw, etc.)
-  [x] Combat Stats (AC, Speed, HP)
-  [ ] Spells
-  [x] Inventory
-[ ] Full site rendering to match a written character sheet
-  [X] Initial work on site rendering
-  [ ] Feature parity with a Document
-  [ ] User-Expansion
-[ ] Import from JSON function
-[ ] Export to JSON function
+- [ ] JSON Model Complete
+  - [x] Name
+  - [x] Basic Info
+  - [x] Abilities and Skills
+  - [x] Background (bond, flaw, etc.)
+  - [x] Combat Stats (AC, Speed, HP)
+  - [ ] Spells
+  - [x] Inventory
+- [ ] Full site rendering to match a written character sheet
+  - [X] Initial work on site rendering
+  - [ ] Feature parity with a Document
+  - [ ] User-Expansion
+- [ ] Import from JSON function
+- [ ] Export to JSON function
 
 ## JSON Properties
 
@@ -27,13 +27,13 @@ This implementation of a 5e character sheet in JSON is based on [this project fo
 
 Additionally, it might be possible for this JSON to be normalised to allow user-expansion, such as adding in Lacing abilities from [Incarnate: The Last of the Lacers](https://www.dmsguild.com/product/191837/Incarnate-The-Last-of-the-Lacers), which has it's own not-quite-a-spell ability which might be useful to record.
 
-[x] Name
-[x] Basic Info
-[x] Abilities and Skills
-[x] Background (bond, flaw, etc.)
-[x] Combat Stats (AC, Speed, HP)
-[ ] Spells
-[x] Inventory
+- [x] Name
+- [x] Basic Info
+- [x] Abilities and Skills
+- [x] Background (bond, flaw, etc.)
+- [x] Combat Stats (AC, Speed, HP)
+- [ ] Spells
+- [x] Inventory
 
 - character:
   - name: string
