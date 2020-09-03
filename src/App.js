@@ -1,8 +1,5 @@
 import React from 'react';
 import './App.css';
-import data from './blankChar.json';
-
-window.$data = data;
 
 class Card extends React.Component {
   render() {
@@ -18,13 +15,13 @@ class Card extends React.Component {
 
 class StatPanelGroup extends React.Component {
   render() {
-    let propData = window.$data;
+
     let temp = [];
 
-    console.log(propData);
+    console.log(this.props.charData);
 
-    for (const key in propData.stats) {
-      let element = propData.stats[key];
+    for (const key in this.props.charData.stats) {
+      let element = this.props.charData.stats[key];
       let tempMod = "";
 
       if (element.base >= 0) {
@@ -70,71 +67,81 @@ class StatPanel extends React.Component {
   }
 }
 
-export default function App() {
+export default class App extends React.Component {
 
-  function increment() {
-    for (const key in window.$data.stats) {
-      const element = window.$data.stats[key];
-      element.base++;
-      console.log(element.base);
-    }
+  constructor(props) {
+    super(props);
+    this.state = { charData: this.props.charData };
+    this.increment = this.increment.bind(this);
   }
 
-  return (
-    <div className="app">
+  increment(data) {
+    for (const key in data.stats) {
+      const element = data.stats[key];
+      element.base++;
+    }
+    return data
+  }
 
-      <header className="bg-light mb-5">
-        <div className="container pt-5 pb-5">
-          <div className="row">
+  render() {
+    return (
+      <div className="app" >
 
-            <div className="col-sm flex-grow-1">
+        <header className="bg-light mb-5">
+          <div className="container pt-5 pb-5">
+            <div className="row">
 
-              <h1 className="display-3">Strife</h1>
-              <p><span className="text-muted">Online D&D Character Sheet utility</span></p>
-            </div>
+              <div className="col-sm flex-grow-1">
 
-            <div className="col-sm-auto">
-              <button className="btn btn-lg btn-dark m-1 btn-block" disabled>Import Character</button>
-              <button className="btn btn-lg btn-dark m-1 btn-block" disabled>Export Character</button>
-              <p className="text-muted"><small>coming soon!</small></p>
-            </div>
-          </div>
-        </div>
-      </header>
+                <h1 className="display-3">Strife</h1>
+                <p><span className="text-muted">Online D&D Character Sheet utility</span></p>
+              </div>
 
-      <main className="bg-white">
-        <div className="container" id="content">
-          <div className="d-flex justify-content-center">
-            <div className="mb-5">
-              <button className="btn btn-lg btn-block btn-primary" disabled>Create New Character</button>
-              <p className="text-muted"><small>also coming soon!</small></p>
-              <br />
-
-              <button className="btn btn-lg btn-block btn-primary" onClick={increment}>Increment Stats</button>
+              <div className="col-sm-auto">
+                <button className="btn btn-lg btn-dark m-1 btn-block" disabled>Import Character</button>
+                <button className="btn btn-lg btn-dark m-1 btn-block" disabled>Export Character</button>
+                <p className="text-muted"><small>coming soon!</small></p>
+              </div>
             </div>
           </div>
+        </header>
 
-          <StatPanelGroup />
+        <main className="bg-white">
+          <div className="container" id="content">
+            <div className="d-flex justify-content-center">
+              <div className="mb-5">
+                <button className="btn btn-lg btn-block btn-primary" disabled>Create New Character</button>
+                <p className="text-muted"><small>also coming soon!</small></p>
+                <br />
 
-        </div>
-      </main>
-
-      <footer className="bg-dark pt-5 pb-5">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-4">
-              <p className="text-muted"></p>
+                <button className="btn btn-lg btn-block btn-primary"
+                  onClick={() => this.setState({ charData: this.increment(this.state.charData) })}
+                >Increment Stats</button>
+              </div>
             </div>
-            <div className="col-sm-4">
-              <p className="text-muted text-center">cerys was here</p>
-            </div>
-            <div className="col-sm-4">
-              <p className="text-muted"></p>
+
+            <StatPanelGroup charData={this.state.charData} />
+
+          </div>
+        </main>
+
+        <footer className="bg-dark pt-5 pb-5">
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-4">
+                <p className="text-muted"></p>
+              </div>
+              <div className="col-sm-4">
+                <p className="text-muted text-center">cerys was here</p>
+              </div>
+              <div className="col-sm-4">
+                <p className="text-muted"></p>
+              </div>
             </div>
           </div>
-        </div>
 
-      </footer>
-    </div >
-  )
+        </footer>
+      </div >
+    )
+  }
 }
