@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
+import data from './blankChar.json';
 
-import data from './testChar.json';
+window.$data = data;
 
-class GenericCard extends React.Component {
+class Card extends React.Component {
   render() {
     return (
       <div className="card">
@@ -16,23 +17,16 @@ class GenericCard extends React.Component {
 }
 
 class StatPanelGroup extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = data;
-  }
-
-  componentDidUpdate(prevProps) {
-    if (this.props.)
-  }
-
   render() {
+    let propData = window.$data;
     let temp = [];
 
-    for (const key in data.stats) {
-      let element = this.state.stats[key];
+    console.log(propData);
 
+    for (const key in propData.stats) {
+      let element = propData.stats[key];
       let tempMod = "";
+
       if (element.base >= 0) {
         tempMod = "+" + Math.floor((element.base - 10) / 2);
       } else {
@@ -66,11 +60,11 @@ class StatPanel extends React.Component {
   render() {
     return (
       <div className="col mb-2">
-        <GenericCard>
+        <Card>
           <h5>{this.props.name}</h5>
           <h2>{this.props.val}</h2>
           <h6>{this.props.mod}</h6>
-        </GenericCard>
+        </Card>
       </div>
     )
   }
@@ -79,8 +73,8 @@ class StatPanel extends React.Component {
 export default function App() {
 
   function increment() {
-    for (const key in data.stats) {
-      const element = data.stats[key];
+    for (const key in window.$data.stats) {
+      const element = window.$data.stats[key];
       element.base++;
       console.log(element.base);
     }
