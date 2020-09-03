@@ -14,6 +14,9 @@ This project is intended to be a full replacement for a form-filled or pen & pap
   - [x] Combat Stats (AC, Speed, HP)
   - [ ] Spells
   - [x] Inventory
+    - [ ] Magic Items
+  - [ ] Expand Movement & Vision
+  - [ ] Attunement Slots
 - [ ] Full site rendering to match a written character sheet
   - [X] Initial work on site rendering
   - [ ] Edit function for any displayed card
