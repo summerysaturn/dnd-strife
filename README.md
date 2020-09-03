@@ -23,14 +23,6 @@ This project is intended to be a full replacement for a form-filled or pen & pap
 
 ## JSON Properties
 
-- [x] Name
-- [x] Basic Info
-- [x] Abilities and Skills
-- [x] Background (bond, flaw, etc.)
-- [x] Combat Stats (AC, Speed, HP)
-- [ ] Spells
-- [x] Inventory
-
 This implementation of a 5e character sheet in JSON is based on [this project form 2017](https://github.com/revuniversal/5e-sheets/), intended to be a full expansion allowing this site to act as a full replacement to a form-filled or pen & paper character sheet for standard 5e characters.
 
 Additionally, it might be possible for this JSON to be normalised to allow user-expansion, such as adding in Lacing abilities from [Incarnate: The Last of the Lacers](https://www.dmsguild.com/product/191837/Incarnate-The-Last-of-the-Lacers), which has it's own not-quite-a-spell ability which might be useful to record.
