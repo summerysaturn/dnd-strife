@@ -1,66 +1,245 @@
 {
-  "characterName": "blank",
-  "playerName": "blank",
-  "alignment": "True Neutral",
-  "level": 0,
-  "exp": 0,
-  "hp": {
-    "max": 0,
-    "current": 0
+  "name": "",
+  "alignment": "",
+  "background": {
+    "backgroundName": "",
+    "backstory": "",
+    "traits": "",
+    "ideals": "",
+    "bonds": "",
+    "flaws": ""
   },
   "stats": {
-    "str": {
-      "name": "STR",
-      "base": 10,
-      "prof": false
-    },
-    "dex": {
-      "name": "DEX",
-      "base": 10,
-      "prof": false
-    },
-    "con": {
-      "name": "CON",
-      "base": 10,
-      "prof": false
-    },
-    "int": {
-      "name": "INT",
-      "base": 10,
-      "prof": false
-    },
-    "wis": {
-      "name": "WIS",
-      "base": 10,
-      "prof": false
-    },
-    "cha": {
-      "name": "CHA",
-      "base": 10,
-      "prof": false
-    }
+    "class": "",
+    "experience": "",
+    "level": "",
+    "abilities": [
+      {
+        "name": "Strength",
+        "abbreviation": "STR",
+        "score": 0,
+        "modifier": 0
+      },
+      {
+        "name": "Dexterity",
+        "abbreviation": "DEX",
+        "score": 0,
+        "modifier": 0
+      },
+      {
+        "name": "Constitution",
+        "abbreviation": "CON",
+        "score": 0,
+        "modifier": 0
+      },
+      {
+        "name": "Intelligence",
+        "abbreviation": "INT",
+        "score": 0,
+        "modifier": 0
+      },
+      {
+        "name": "Wisdom",
+        "abbreviation": "WIS",
+        "score": 0,
+        "modifier": 0
+      },
+      {
+        "name": "Charisma",
+        "abbreviation": "CHA",
+        "score": 0,
+        "modifier": 0
+      }
+    ],
+    "skills": [
+      {
+        "name": "Acrobatics",
+        "advantage": false,
+        "proficiency": false,
+        "modifier": 0,
+        "ability": 0
+      },
+      {
+        "name": "Animal Handling",
+        "advantage": false,
+        "proficiency": false,
+        "modifier": 0,
+        "ability": 0
+      },
+      {
+        "name": "Arcana",
+        "advantage": false,
+        "proficiency": false,
+        "modifier": 0,
+        "ability": 0
+      },
+      {
+        "name": "Athletics",
+        "advantage": false,
+        "proficiency": false,
+        "modifier": 0,
+        "ability": 0
+      },
+      {
+        "name": "Deceptions",
+        "advantage": false,
+        "proficiency": false,
+        "modifier": 0,
+        "ability": 0
+      },
+      {
+        "name": "History",
+        "advantage": false,
+        "proficiency": false,
+        "modifier": 0,
+        "ability": 0
+      },
+      {
+        "name": "Insight",
+        "advantage": false,
+        "proficiency": false,
+        "modifier": 0,
+        "ability": 0
+      },
+      {
+        "name": "Intimidation",
+        "advantage": false,
+        "proficiency": false,
+        "modifier": 0,
+        "ability": 0
+      },
+      {
+        "name": "Investigation",
+        "advantage": false,
+        "proficiency": false,
+        "modifier": 0,
+        "ability": 0
+      },
+      {
+        "name": "Medicine",
+        "advantage": false,
+        "proficiency": false,
+        "modifier": 0,
+        "ability": 0
+      },
+      {
+        "name": "Nature",
+        "advantage": false,
+        "proficiency": false,
+        "modifier": 0,
+        "ability": 0
+      },
+      {
+        "name": "Perception",
+        "advantage": false,
+        "proficiency": false,
+        "modifier": 0,
+        "ability": 0
+      },
+      {
+        "name": "Performance",
+        "advantage": false,
+        "proficiency": false,
+        "modifier": 0,
+        "ability": 0
+      },
+      {
+        "name": "Persuasion",
+        "advantage": false,
+        "proficiency": false,
+        "modifier": 0,
+        "ability": 0
+      },
+      {
+        "name": "Religion",
+        "advantage": false,
+        "proficiency": false,
+        "modifier": 0,
+        "ability": 0
+      },
+      {
+        "name": "Sleight of Hand",
+        "advantage": false,
+        "proficiency": false,
+        "modifier": 0,
+        "ability": 0
+      },
+      {
+        "name": "Stealth",
+        "advantage": false,
+        "proficiency": false,
+        "modifier": 0,
+        "ability": 0
+      },
+      {
+        "name": "Stealth",
+        "advantage": false,
+        "proficiency": false,
+        "modifier": 0,
+        "ability": 0
+      },
+      {
+        "name": "Survival",
+        "advantage": false,
+        "proficiency": false,
+        "modifier": 0,
+        "ability": 0
+      },
+    ],
+    "savingThrows": [
+      {
+        "name": "Strength",
+        "advantage": false,
+        "proficiency": 0,
+        "modifier": 0
+      },
+      {
+        "name": "Dexterity",
+        "advantage": false,
+        "proficiency": 0,
+        "modifier": 0
+      },
+      {
+        "name": "Constitution",
+        "advantage": false,
+        "proficiency": 0,
+        "modifier": 0
+      },
+      {
+        "name": "Intelligence",
+        "advantage": false,
+        "proficiency": 0,
+        "modifier": 0
+      },
+      {
+        "name": "Wisdom",
+        "advantage": false,
+        "proficiency": 0,
+        "modifier": 0
+      },
+      {
+        "name": "Charisma",
+        "advantage": false,
+        "proficiency": 0,
+        "modifier": 0
+      }
+    ]
   },
-  "skillProficiency": {
-    "acrobatics": false,
-    "animalHandling": false,
-    "arcana": false,
-    "athletics": false,
-    "deception": false,
-    "history": false,
-    "insight": false,
-    "intimidation": false,
-    "investigation": false,
-    "medicine": false,
-    "nature": false,
-    "perception": false,
-    "performance": false,
-    "persuasion": false,
-    "religion": false,
-    "sleightOfHand": false,
-    "stealth": false,
-    "survival": false,
-    "smithing": false
+  "combatStats": {
+    "maxhp": 0,
+    "hp": 0,
+    "initiative": 0,
+    "speed": 0,
+    "ac": 0
   },
-  "languages": [],
-  "items": []
+  "inventory": {
+    "coins": 0,
+    "items": [
+      {
+        "name": "",
+        "count": "",
+        "value": ""
+      }
+    ]
+  }
 }

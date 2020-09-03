@@ -74,10 +74,9 @@ Additionally, it might be possible for this JSON to be normalised to allow user-
   - inventory:
     - coins: number
     - items:
-      - item: array:
-        - name: string
-        - count: number
-        - value: number
+      - name: string
+      - count: number
+      - value: number
 
 ## Usage
 
