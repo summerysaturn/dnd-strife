@@ -1,8 +1,9 @@
 {
-  "name": "dnd-strife",
+  "name": "5e-strife",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "http://summerysaturn.github.io/dnd-strife",
+  "private": false,
+  "license": "MIT",
+  "homepage": "http://summerysaturn.github.io/5e-strife",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
