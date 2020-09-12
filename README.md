@@ -1,4 +1,4 @@
-# D&D 5e - Strife
+![D&D 5e - Strife Heading Image](.github/preview.png)
 
 This is an online character sheet that I'm creating using React, Bootstrap and JSON. Currently not everything is implemented, although the site is up at <https://summerysaturn.github.io/5e-strife/>
 
