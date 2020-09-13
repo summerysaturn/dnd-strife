@@ -22,6 +22,19 @@
   --dark: #343a40;
 }
 
+.title-graphic {
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+.headerFlex {
+  display: flex;
+}
+
+.underDevelopment {
+  text-align: center;
+}
+
 .hr {
   margin: 3rem 0;
 }
@@ -46,4 +59,32 @@ hr.hr-text::before {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.card-columns .stats {
+  column-count: 1 !important;
+}
+
+@media (max-width: 767px) {
+  .title-graphic {
+    width: 100%;
+  }
+
+  .headerFlex {
+    display: block;
+    justify-content: center !important;
+    text-align: center;
+  }
+}
+
+@media (min-width: 576px) {
+  .card-columns {
+    column-count: 2 !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-columns {
+    column-count: 3 !important;
+  }
 }

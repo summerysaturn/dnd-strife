@@ -1,53 +1,53 @@
 {
-  "name": "",
-  "alignment": "",
+  "name": "blank",
+  "alignment": "blank",
   "background": {
-    "backgroundName": "",
-    "backstory": "",
-    "traits": "",
-    "ideals": "",
-    "bonds": "",
-    "flaws": ""
+    "backgroundName": "blank",
+    "backstory": "blank",
+    "traits": "blank",
+    "ideals": "blank",
+    "bonds": "blank",
+    "flaws": "blank"
   },
   "stats": {
-    "class": "",
-    "experience": "",
-    "level": "",
+    "class": "blank",
+    "experience": 0,
+    "level": 0,
     "abilities": [
       {
         "name": "Strength",
         "abbreviation": "STR",
-        "score": 0,
+        "score": 10,
         "modifier": 0
       },
       {
         "name": "Dexterity",
         "abbreviation": "DEX",
-        "score": 0,
+        "score": 10,
         "modifier": 0
       },
       {
         "name": "Constitution",
         "abbreviation": "CON",
-        "score": 0,
+        "score": 10,
         "modifier": 0
       },
       {
         "name": "Intelligence",
         "abbreviation": "INT",
-        "score": 0,
+        "score": 10,
         "modifier": 0
       },
       {
         "name": "Wisdom",
         "abbreviation": "WIS",
-        "score": 0,
+        "score": 10,
         "modifier": 0
       },
       {
         "name": "Charisma",
         "abbreviation": "CHA",
-        "score": 0,
+        "score": 10,
         "modifier": 0
       }
     ],
@@ -236,9 +236,9 @@
     "coins": 0,
     "items": [
       {
-        "name": "",
-        "count": "",
-        "value": ""
+        "name": "blank",
+        "count": "blank",
+        "value": "blank"
       }
     ]
   }

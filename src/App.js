@@ -1,25 +1,92 @@
 import React from 'react';
+
+import {
+  Button, Card, FormControl, InputGroup, Form
+} from 'react-bootstrap';
+
 import './App.css';
 
-class Card extends React.Component {
+class Wrapper extends React.Component {
   render() {
     return (
-      <div className="card">
-        <div className="card-body text-center">
+      <div className="app" >
+        <header className="bg-light mb-5">
+          <div className="container pt-5 pb-5">
+            <div className="headerFlex">
+
+              <div className="col-sm flex-grow-1">
+
+                <img
+                  src={process.env.PUBLIC_URL + "/title-graphic.png"}
+                  className="title-graphic"
+                  alt="5e-Strife"
+                />
+
+                <p><span className="text-muted">Online D&D Character Sheet utility</span></p>
+              </div>
+
+              <div className="col-sm-auto">
+
+                <Button block variant="outline-secondary" size="lg" disabled>
+                  Import Character
+                  </Button>{' '}
+                <Button block variant="outline-secondary" size="lg" disabled>
+                  Export Character
+                  </Button>{' '}
+
+                <p className="text-muted">
+                  <small>coming soon!</small>
+                </p>
+
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main className="bg-white">
+          <div className="container">
+            <h2 className="underDevelopment">
+              This tool is under development!
+            </h2>
+            {this.props.children}
+          </div>
+        </main>
+
+        <div style={{ height: "20vh" }}>
+        </div>
+      </div >
+    )
+  }
+}
+
+class Heading extends React.Component {
+  render() {
+    return (
+      <>
+        <div class="hr">
+          <hr data-content={this.props.text} class="hr-text" />
+        </div>
+        <div className="card-columns">
           {this.props.children}
         </div>
-      </div>
+      </>
     )
   }
 }
 
 class StatPanelGroup extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { data: this.props.data };
+  }
+
   render() {
 
     let temp = [];
 
-    for (const key in this.props.charData.stats.abilities) {
-      let element = this.props.charData.stats.abilities[key];
+    for (const key in this.state.data.stats.abilities) {
+      let element = this.state.data.stats.abilities[key];
       let tempMod = "";
 
       if (element.base >= 0) {
@@ -37,16 +104,18 @@ class StatPanelGroup extends React.Component {
     }
 
     return (
-      <div className="row row-cols-1 row-cols-md-6">
-        {temp.map(e => (
-          <StatPanel
-            key={e.key}
-            name={e.name}
-            val={e.val}
-            mod={e.mod}
-          />
-        ))}
-      </div>
+      <Card>
+        <Card.Body>
+          {this.state.data.stats.abilities.map(e => (
+            <StatPanel
+              key={e.key}
+              name={e.name}
+              score={e.score}
+              modifier={e.modifier}
+            />
+          ))}
+        </Card.Body>
+      </Card>
     )
   }
 }
@@ -54,87 +123,40 @@ class StatPanelGroup extends React.Component {
 class StatPanel extends React.Component {
   render() {
     return (
-      <div className="col mb-2">
-        <Card>
-          <h5>{this.props.name}</h5>
-          <h2>{this.props.val}</h2>
-          <h6>{this.props.mod}</h6>
-        </Card>
-      </div>
+      <>
+        <Form.Group>
+          <Form.Label htmlFor="inlineFormInput">
+            {this.props.name}
+          </Form.Label>
+          <InputGroup size="lg">
+            <FormControl type="number" value={this.props.score} />
+            <InputGroup.Append>
+              <InputGroup.Text>
+                {this.props.modifier}
+              </InputGroup.Text>
+            </InputGroup.Append>
+          </InputGroup>
+        </Form.Group>
+      </>
     )
   }
 }
-
-
-class Heading extends React.Component {
-  render() {
-    return (
-      <div class="hr">
-        <hr data-content={this.props.text} class="hr-text" />
-      </div>
-    )
-  }
-}
-
 
 export default class App extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { charData: this.props.charData };
-    this.increment = this.increment.bind(this);
-  }
-
-  increment(data) {
-    for (const key in data.stats.abilities) {
-      const element = data.stats.abilities[key];
-      element.score++;
-    }
-    return data
+    this.state = { data: this.props.data };
   }
 
   render() {
     return (
-      <div className="app" >
 
-        <header className="bg-light mb-5">
-          <div className="container pt-5 pb-5">
-            <div className="row">
-
-              <div className="col-sm flex-grow-1">
-
-                <h1 className="display-3">Strife</h1>
-                <p><span className="text-muted">Online D&D Character Sheet utility</span></p>
-              </div>
-
-              <div className="col-sm-auto">
-                <button className="btn btn-lg btn-dark m-1 btn-block" disabled>Import Character</button>
-                <button className="btn btn-lg btn-dark m-1 btn-block" disabled>Export Character</button>
-                <p className="text-muted"><small>coming soon!</small></p>
-              </div>
-            </div>
-          </div>
-        </header>
-
-        <main className="bg-white">
-          <div className="container" id="content">
-
-            <Heading text="Stats" />
-
-            <div className="d-flex justify-content-center mb-4">
-              <button className="btn btn-lg btn-primary"
-                onClick={() => this.setState({ charData: this.increment(this.state.charData) })}
-              >Increment Stats</button>
-            </div>
-
-            <StatPanelGroup charData={this.state.charData} />
-
-          </div>
-        </main>
-
-        <div style={{ height: "20vh" }}>
-        </div>
-      </div >
+      <Wrapper>
+        <Heading text="Stats" className="stats">
+          <StatPanelGroup data={this.state.data} />
+        </Heading>
+      </Wrapper>
     )
   }
 }
