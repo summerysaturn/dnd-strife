@@ -14,7 +14,7 @@ class Wrapper extends React.Component {
           <div className="container pt-5 pb-5">
             <div className="headerFlex">
 
-              <div className="col-sm flex-grow-1">
+              <div className="flex-grow-1">
 
                 <img
                   src={process.env.PUBLIC_URL + "/title-graphic.png"}
@@ -25,7 +25,7 @@ class Wrapper extends React.Component {
                 <p><span className="text-muted">Online D&D Character Sheet utility</span></p>
               </div>
 
-              <div className="col-sm-auto">
+              <div>
 
                 <Button block variant="outline-secondary" size="lg" disabled>
                   Import Character
@@ -52,8 +52,7 @@ class Wrapper extends React.Component {
           </div>
         </main>
 
-        <div style={{ height: "20vh" }}>
-        </div>
+        <div style={{ height: "20vh" }}></div>
       </div >
     )
   }
@@ -82,27 +81,6 @@ class StatPanelGroup extends React.Component {
   }
 
   render() {
-
-    let temp = [];
-
-    for (const key in this.state.data.stats.abilities) {
-      let element = this.state.data.stats.abilities[key];
-      let tempMod = "";
-
-      if (element.base >= 0) {
-        tempMod = "+" + Math.floor((element.score - 10) / 2);
-      } else {
-        tempMod = Math.floor((element.score - 10) / 2);
-      }
-
-      temp.push({
-        key: "card-" + element.abbreviation,
-        name: element.abbreviation,
-        val: element.score,
-        mod: tempMod
-      })
-    }
-
     return (
       <Card>
         <Card.Body>

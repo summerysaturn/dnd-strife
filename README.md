@@ -6,12 +6,15 @@ This project is intended to be a full replacement for a form-filled or pen & pap
 
 ## Goals
 
+### General Project Goals
+
 - [ ] JSON Model Complete
   - [x] Name
   - [x] Basic Info
   - [x] Abilities and Skills
   - [x] Background (bond, flaw, etc.)
   - [x] Combat Stats (AC, Speed, HP)
+  - [ ] Attacks
   - [ ] Spells
   - [x] Inventory
     - [ ] Magic Items
@@ -26,6 +29,49 @@ This project is intended to be a full replacement for a form-filled or pen & pap
   - [ ] React Implementation
 - [ ] Import from JSON function
 - [ ] Export to JSON function
+
+### Page Element Goals
+
+- [x] Core Stats
+- [ ] Combat Stat Panel
+  - [ ] HP
+  - [ ] Speed
+    - [ ] Walking
+    - [ ] Flying
+    - [ ] Swimming
+    - [ ] Climbing
+    - [ ] Burrow
+  - [ ] Initiative
+  - [ ] AC
+  - [ ] Proficiency Bonus
+  - [ ] Death Saves
+  - [ ] Senses
+- [ ] Saving Throws
+- [ ] Skill Rolls
+- [ ] Speed/Initiative
+- [ ] Character Info
+  - [ ] Name
+  - [ ] Class & Level
+  - [ ] Alignment
+  - [ ] Race
+  - [ ] Sex
+- [ ] Features & Traits
+- [ ] Proficiencies & Languages
+- [ ] Attack Panel
+  - [ ] Physical Attacks
+  - [ ] Spells
+    - [ ] Cantrips
+    - [ ] Level Spells
+  - [ ] Misc Actions
+- [ ] Inventory Panel
+  - [ ] Inventory
+  - [ ] Equipment
+
+(for future reference)
+
+- <https://www.dndbeyond.com/sources/basic-rules/monsters#Speed>
+- <https://www.dndbeyond.com/sources/basic-rules/monsters#Senses>
+- <https://www.dndbeyond.com/sources/basic-rules/adventuring#VisionandLight>
 
 ## JSON Properties
 
