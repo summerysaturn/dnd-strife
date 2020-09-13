@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9cb43e985e110a08ea9f2a064fbb4a47",
+    "revision": "146523e58282a3aa608b18061313e9ec",
     "url": "/5e-strife/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/5e-strife/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "e58e921b86b2e322c08b",
-    "url": "/5e-strife/static/css/main.62866483.chunk.css"
+    "revision": "e361c69d5f961c9c2dea",
+    "url": "/5e-strife/static/css/main.b8f79403.chunk.css"
   },
   {
     "revision": "38fea6e2f3f957d1d69e",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/5e-strife/static/js/2.59f0e6b5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e58e921b86b2e322c08b",
-    "url": "/5e-strife/static/js/main.072ee644.chunk.js"
+    "revision": "e361c69d5f961c9c2dea",
+    "url": "/5e-strife/static/js/main.3092d80a.chunk.js"
   },
   {
     "revision": "9e0c9ccc3809d134efbf",
