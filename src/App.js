@@ -18,22 +18,20 @@ class StatPanelGroup extends React.Component {
 
     let temp = [];
 
-    console.log(this.props.charData);
-
-    for (const key in this.props.charData.stats) {
-      let element = this.props.charData.stats[key];
+    for (const key in this.props.charData.stats.abilities) {
+      let element = this.props.charData.stats.abilities[key];
       let tempMod = "";
 
       if (element.base >= 0) {
-        tempMod = "+" + Math.floor((element.base - 10) / 2);
+        tempMod = "+" + Math.floor((element.score - 10) / 2);
       } else {
-        tempMod = "-" + Math.floor((element.base - 10) / 2);
+        tempMod = Math.floor((element.score - 10) / 2);
       }
 
       temp.push({
-        key: "card-" + element.name,
-        name: element.name,
-        val: element.base,
+        key: "card-" + element.abbreviation,
+        name: element.abbreviation,
+        val: element.score,
         mod: tempMod
       })
     }
@@ -67,6 +65,18 @@ class StatPanel extends React.Component {
   }
 }
 
+
+class Heading extends React.Component {
+  render() {
+    return (
+      <div class="hr">
+        <hr data-content={this.props.text} class="hr-text" />
+      </div>
+    )
+  }
+}
+
+
 export default class App extends React.Component {
 
   constructor(props) {
@@ -76,9 +86,9 @@ export default class App extends React.Component {
   }
 
   increment(data) {
-    for (const key in data.stats) {
-      const element = data.stats[key];
-      element.base++;
+    for (const key in data.stats.abilities) {
+      const element = data.stats.abilities[key];
+      element.score++;
     }
     return data
   }
@@ -108,16 +118,13 @@ export default class App extends React.Component {
 
         <main className="bg-white">
           <div className="container" id="content">
-            <div className="d-flex justify-content-center">
-              <div className="mb-5">
-                <button className="btn btn-lg btn-block btn-primary" disabled>Create New Character</button>
-                <p className="text-muted"><small>also coming soon!</small></p>
-                <br />
 
-                <button className="btn btn-lg btn-block btn-primary"
-                  onClick={() => this.setState({ charData: this.increment(this.state.charData) })}
-                >Increment Stats</button>
-              </div>
+            <Heading text="Stats" />
+
+            <div className="d-flex justify-content-center mb-4">
+              <button className="btn btn-lg btn-primary"
+                onClick={() => this.setState({ charData: this.increment(this.state.charData) })}
+              >Increment Stats</button>
             </div>
 
             <StatPanelGroup charData={this.state.charData} />
@@ -125,22 +132,8 @@ export default class App extends React.Component {
           </div>
         </main>
 
-        <footer className="bg-dark pt-5 pb-5">
-          <div className="container">
-            <div className="row">
-              <div className="col-sm-4">
-                <p className="text-muted"></p>
-              </div>
-              <div className="col-sm-4">
-                <p className="text-muted text-center">cerys was here</p>
-              </div>
-              <div className="col-sm-4">
-                <p className="text-muted"></p>
-              </div>
-            </div>
-          </div>
-
-        </footer>
+        <div style={{ height: "20vh" }}>
+        </div>
       </div >
     )
   }
