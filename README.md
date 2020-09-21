@@ -32,9 +32,12 @@ This project is intended to be a full replacement for a form-filled or pen & pap
 
 ### Page Element Goals
 
+- [ ] Sidebar
 - [x] Core Stats
-- [ ] Combat Stat Panel
-  - [ ] HP
+- [ ] Saving Throws
+- [ ] Skill Rolls
+- [ ] Combat Stats
+  - [x] HP
   - [ ] Speed
     - [ ] Walking
     - [ ] Flying
@@ -46,9 +49,6 @@ This project is intended to be a full replacement for a form-filled or pen & pap
   - [ ] Proficiency Bonus
   - [ ] Death Saves
   - [ ] Senses
-- [ ] Saving Throws
-- [ ] Skill Rolls
-- [ ] Speed/Initiative
 - [ ] Character Info
   - [ ] Name
   - [ ] Class & Level

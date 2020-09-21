@@ -49,7 +49,7 @@ hr.hr-text {
 hr.hr-text::before {
     content: attr(data-content);
     display: inline-block;
-    background: #fff;
+    background: white;
     font-weight: bold;
     font-size: 2rem;
     color: black;
