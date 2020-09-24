@@ -47,18 +47,18 @@ hr.hr-text {
 }
 
 hr.hr-text::before {
-    content: attr(data-content);
-    display: inline-block;
-    background: white;
-    font-weight: bold;
-    font-size: 2rem;
-    color: black;
-    border-radius: 30rem;
-    padding: 0.2rem 2rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  content: attr(data-content);
+  display: inline-block;
+  background: white;
+  font-weight: bold;
+  font-size: 2rem;
+  color: black;
+  border-radius: 30rem;
+  padding: 0.2rem 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .card-columns .stats {
