@@ -1,24 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import data from './blankChar.json';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import defaultData from "./blankChar.json";
+import "./index.css";
 
-import {
-  Button, Card, FormControl, InputGroup, Form
-} from 'react-bootstrap';
+import { Card, Button, FormControl, InputGroup, Form } from "react-bootstrap";
+
+const Data = React.createContext(defaultData);
 
 class Wrapper extends React.Component {
   render() {
     return (
-      <div className="app" >
-
+      <div className="app">
         <header className="bg-light mb-5">
           <div className="container pt-5 pb-5">
             <div className="headerFlex">
-
               <div className="flex-grow-1">
-
                 <a href="https://summerysaturn.github.io/">
                   <img
                     src={process.env.PUBLIC_URL + "/title-graphic.png"}
@@ -27,22 +24,23 @@ class Wrapper extends React.Component {
                   />
                 </a>
 
-                <p><span className="text-muted">Online D&D Character Sheet utility</span></p>
+                <p>
+                  <span className="text-muted">
+                    Online D&D Character Sheet utility
+                  </span>
+                </p>
               </div>
 
               <div>
-
                 <Button block variant="outline-secondary" size="lg" disabled>
                   Import Character
-                </Button>{' '}
+                </Button>{" "}
                 <Button block variant="outline-secondary" size="lg" disabled>
                   Export Character
-                </Button>{' '}
-
+                </Button>{" "}
                 <p className="text-muted">
                   <small>coming soon!</small>
                 </p>
-
               </div>
             </div>
           </div>
@@ -50,127 +48,32 @@ class Wrapper extends React.Component {
 
         <main className="bg-white">
           <div className="container">
-            <h2 className="underDevelopment">
-              This tool is under development!
-            </h2>
+            <div className="text-center">
+              <h5 className="underDevelopment">
+                This tool is under development!
+              </h5>
+              <a href="https://github.com/summerysaturn/5e-strife">
+                Link to Repo
+              </a>
+            </div>
+
             {this.props.children}
           </div>
         </main>
 
         <div style={{ height: "20vh" }}></div>
       </div>
-    )
+    );
   }
 }
 
 class Heading extends React.Component {
   render() {
     return (
-      <>
-        <div class="hr">
-          <hr data-content={this.props.text} class="hr-text" />
-        </div>
-        <div className="card-columns">
-          {this.props.children}
-        </div>
-      </>
-    )
-  }
-}
-
-class CoreStatGroup extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = { data: this.props.data };
-  }
-
-  render() {
-    return (
-      <Card>
-        <Card.Body>
-          {this.state.data.stats.abilities.map(e => (
-            <CoreStat
-              key={e.key}
-              name={e.name}
-              score={e.score}
-              modifier={e.modifier}
-            />
-          ))}
-        </Card.Body>
-      </Card>
-    )
-  }
-}
-
-class CoreStat extends React.Component {
-  render() {
-    return (
-      <>
-        <Form.Group>
-          <Form.Label htmlFor="inlineFormInput">
-            {this.props.name}
-          </Form.Label>
-          <InputGroup>
-            <FormControl type="number" value={this.props.score} />
-            <InputGroup.Append>
-              <InputGroup.Text>
-                {this.props.modifier}
-              </InputGroup.Text>
-            </InputGroup.Append>
-          </InputGroup>
-        </Form.Group>
-      </>
-    )
-  }
-}
-
-class HealthPanel extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = { data: this.props.data };
-  }
-
-  render() {
-    return (
-      <Card>
-        <Card.Body>
-
-          <InputBox label="Health Points" append={"/ " + this.props.data.combatStats.maxhp} />
-
-          <Form.Group>
-            <Form.Label htmlFor="inlineFormInput">
-              Temporary HP
-            </Form.Label>
-            <InputGroup>
-              <FormControl type="number" />
-            </InputGroup>
-          </Form.Group>
-
-        </Card.Body>
-      </Card>
-    )
-  }
-}
-
-class SpeedPanel extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = { data: this.props.data };
-  }
-
-  render() {
-    return (
-      <Card>
-        <Card.Body>
-
-          <InputBox label="Speed" append="Feet" />
-
-        </Card.Body>
-      </Card>
-    )
+      <div className="hr">
+        <hr data-content={this.props.text} className="hr-text" />
+      </div>
+    );
   }
 }
 
@@ -178,50 +81,66 @@ class InputBox extends React.Component {
   render() {
     return (
       <Form.Group>
-        <Form.Label htmlFor="inlineFormInput">
-          {this.props.label}
-        </Form.Label>
+        <Form.Label htmlFor="inlineFormInput">{this.props.label}</Form.Label>
         <InputGroup>
           <FormControl type="number" />
           <InputGroup.Append>
-            <InputGroup.Text>
-              {this.props.append}
-            </InputGroup.Text>
+            <InputGroup.Text>{this.props.append}</InputGroup.Text>
           </InputGroup.Append>
         </InputGroup>
       </Form.Group>
-    )
+    );
+  }
+}
+
+class Abilities extends React.Component {
+  static contextType = Data;
+
+  render() {
+    return (
+      <Card>
+        {this.context.stats.abilities.map((e,i) => (
+          <AbilityCard
+            element={e}
+            target={JSON.stringify(stats.abilities[i])}
+          />
+        ))}
+      </Card>
+    );
+  }
+}
+
+class AbilityCard extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  updateValue() {}
+
+  render() {
+    return (
+      <Card.Body>
+        {this.props.element.name}
+        <Button onClick={this.updateValue}>clicke</Button>
+      </Card.Body>
+    );
   }
 }
 
 class App extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = { data: this.props.data };
-  }
-
   render() {
     return (
-
       <Wrapper>
-        <Heading text="Stats" className="stats">
-
-          <CoreStatGroup data={this.state.data} />
-
-          <HealthPanel data={this.state.data} />
-
-          <SpeedPanel data={this.state.data} />
-
-        </Heading>
+        <Heading text="Stats" className="stats" />
+        <Abilities />
       </Wrapper>
-    )
+    );
   }
 }
 
 ReactDOM.render(
   <React.StrictMode>
-    <App data={data} />
+    <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
