@@ -5,7 +5,7 @@
   "license": "MIT",
   "homepage": "http://summerysaturn.github.io/5e-strife",
   "dependencies": {
-    "axios": "^0.21.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.5.3",
     "bootstrap-icons": "^1.1.0",
     "react": "^16.14.0",
