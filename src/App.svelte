@@ -1,5 +1,6 @@
 <script>
   export let name;
+  import { json } from "./app.js";
 </script>
 
 <style type="text/scss">
@@ -7,7 +8,7 @@
 </style>
 
 <main>
-  <h1>Hello {name}!</h1>
+  <h1>Hello {$json}!</h1>
   <p>
     Visit the
     <a href="https://svelte.dev/tutorial">Svelte tutorial</a>
@@ -16,4 +17,3 @@
 
   <button class="btn-primary btn">hi</button>
 </main>
-
