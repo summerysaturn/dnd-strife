@@ -1,8 +1,8 @@
 {
   "name": "5e-strife",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "repository": "https://github.com/summerysaturn/5e-strife",
-  "author": "lily <48696244+summerysaturn@users.noreply.github.com>",
+  "author": "Charlotte Ward <48696244+summerysaturn@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
     "build": "rollup -c",
