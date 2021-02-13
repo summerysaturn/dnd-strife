@@ -1,0 +1,27 @@
+// Variable overrides for bootstrap
+$primary: #e14040;
+//$secondary: #5ef7e2;
+$light: #d8d8d8;
+
+// Required
+@import "bootstrap/scss/bootstrap";
+
+header {
+  background-color: #f8f9fa !important;
+  padding: 2rem 1rem 2rem 1rem;
+}
+
+.title-graphic {
+  margin-bottom: 1rem;
+}
+
+@include media-breakpoint-up(md) {
+  .title-graphic {
+    width: 400px;
+  }
+}
+@include media-breakpoint-down(md) {
+  .title-graphic {
+    width: 100%;
+  }
+}
